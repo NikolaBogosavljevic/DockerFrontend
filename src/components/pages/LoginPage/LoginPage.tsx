@@ -37,15 +37,10 @@ const Login = () => {
         navigate('/');
       })
       .catch((error) => {
-        if (
-          (typeof error.response !== 'undefined' &&
-            error.response.status === 401) ||
-          error.response.status === 403
-        ) {
-          alert('invalid login');
-        } else {
+
+
           alert('login Error');
-        }
+        
       });
   };
   return (
