@@ -3,6 +3,12 @@ jobs:
   print-hello-world:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: chmod +x run.sh
-      - run: ./run.sh
+      - name: executing remote ssh commands
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          script: echo "Haêllo"
+     
