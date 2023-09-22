@@ -3,7 +3,4 @@ jobs:
   print-hello-world:
     runs-on: ubuntu-latest
     steps:
-      - name: print secret
-        env: 
-          SECRET: ${{ secrets.SECRET }}  
-        run: echo $SECRET
+      - run: ./run.sh
