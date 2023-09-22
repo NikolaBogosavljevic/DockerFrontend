@@ -10,5 +10,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 22
-          script: echo "Haêllo"
+          run: ./run.sh
      
